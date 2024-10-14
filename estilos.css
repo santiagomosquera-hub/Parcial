@@ -1,0 +1,350 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+
+/** GENERALES */
+:root{
+     --color-principal: #cee398;
+     --color-secundario: #0C91E5;
+     --color-alternativo: #FF6537;
+     --gris-default: #6C757D;
+}
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Roboto';
+}
+
+html{
+     scroll-behavior: smooth;
+}
+
+a{
+     text-decoration: none;
+}
+
+
+.btn{
+     width: 200px;
+     height: 40px;
+     border: none;
+     border-radius: 5px;
+     background: var(--color-secundario);
+     color: #FFF;
+     font-size: 14px;
+     font-weight: 600;
+     text-transform: uppercase;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+     transition: all .5s;
+}
+
+.btn:hover{
+     background: #0874B8;
+}
+
+.btn-top{
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     width: 50px;
+     height: 50px;
+     background: var(--color-alternativo);
+     opacity: 0.7;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 20px;
+     color: #FFF;
+     z-index: 1;
+     transition: all .5s;
+}
+
+.btn-top:hover{
+     opacity: 1;
+}
+
+
+.badge{
+     background: var(--color-principal);
+     color: #FFF;
+     font-size: 11px;
+     font-weight: 600;
+     text-transform: uppercase;
+     border-radius: 20px;
+     padding: 5px 15px;
+     cursor: default;
+     transition: all .5s;
+}
+
+
+
+
+
+
+/** MENU SOCIALES  */
+.nav-sociales{
+     width: 100%;
+     height: 35px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background: var(--color-principal);
+}
+
+.nav-sociales a{
+     color: #FFF;
+     opacity: 0.5;
+     font-size: 14px;
+     margin: 0 30px;
+     transition: all .5s;
+}
+
+
+.nav-sociales a:hover{
+     opacity: 1;
+}
+
+
+
+/** MENU PRINCIPAL  */
+.nav-principal{
+     width: 100%;
+     height: 50px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 30px;
+}
+
+.nav-principal img{
+     width: 250px;
+     cursor: pointer;
+}
+
+.nav-principal .input-search{
+     width: 40%;
+     position: relative;
+}
+
+
+.nav-principal .input-search input{
+     width: 100%;
+     height: 35px;
+     border-radius: 50px;
+     border: 1px solid #c4c4c4;
+     color: var(--gris-default);
+     outline: none;
+     padding: 0 50px 0 30px;
+}
+
+.nav-principal .input-search input::placeholder{
+     letter-spacing: 1px;
+     color: #ccc;
+}
+
+
+.nav-principal .input-search i{
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 50px;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color:var(--color-alternativo);
+}
+
+.nav-principal .enlaces a{
+     font-size: 14px;
+     padding: 10px 15px;
+     margin: 0 10px;
+     text-transform: uppercase;
+     font-weight: 600;
+     letter-spacing: 1px;
+     color: var(--gris-default);
+     border-radius: 50px;
+     transition: all .3s;
+}
+
+.nav-principal .enlaces a:hover{
+     color: #FFF;
+}
+
+.nav-principal .enlaces a:nth-child(1):hover{
+     background: var(--color-alternativo);
+}
+
+.nav-principal .enlaces a:nth-child(2):hover{
+     background: var(--color-principal);
+}
+
+.nav-principal .enlaces a:nth-child(3):hover{
+     background: var(--color-secundario);
+}
+
+
+
+
+/** HEADER */
+header{
+     width: 100%;
+     height: calc(100vh - 95px);
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     padding-left: 50px;
+}
+
+header .imagen-header{
+     width: 60%;
+     height: 100%;
+     background: url(img/van.jpg);
+     background-size: cover;
+     background-position: center;
+     clip-path: circle(90% at 92% 50%);
+     z-index: 2;
+     transition: all .5s;
+}
+
+header .content-header{
+     width: 50%;
+}
+
+header .content-header *{
+     margin: 10px 0;
+}
+
+header .content-header h3{
+     font-size: 65px;
+     font-weight: 300;
+}
+
+header .content-header p{
+     font-size: 19px;
+}
+
+
+
+/** DESTACADOS  */
+.destacados{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     position: relative;
+}
+
+.destacados::before{
+     content: 'Destacados';
+     position: absolute;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-weight: 600;
+     font-size: 12em;
+     color: rgba(0, 0, 0, 0.07);
+}
+
+.game{
+     position: relative;
+     width: 45%;
+     height: 350px;
+     margin: 40px 20px;
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     transition: all .5s;
+}
+
+.game:nth-child(1){
+     background: linear-gradient(45deg, #432127, #000000);
+}
+
+.game:nth-child(2){
+     background: linear-gradient(45deg, #148ae5, #6c0b84);
+}
+
+.game:nth-child(3){
+     background: linear-gradient(45deg, #c3b5b5, #211b1b);
+}
+
+.game:nth-child(4){
+     background: linear-gradient(45deg, #26a20d, #0b2d0e);
+}
+
+
+.game img{
+     position: absolute;
+     left: 50%;
+     bottom: 0;
+     transform: translate(-50%);
+     height: 380px;
+     z-index: 1;
+     transition: all .5s;
+}
+
+.game:hover img{
+     left: 75%;
+     height: 400px;
+}
+
+
+
+.game .content{
+     position: relative;
+     width: 50%;
+     left: 20%;
+     padding: 20px 20px 20px 40px;
+     color: #FFF;
+     opacity: 0;
+     transition: all .5s;
+}
+
+.game:hover .content{
+     left: 0;
+     opacity: 1;
+}
+
+.game .content h2{
+     text-transform: uppercase;
+     font-size: 2.2em;
+     line-height: 1em;
+}
+
+.game .content a{
+     position: relative;
+     color: #000;
+     background: #FFF;
+     display: inline-block;
+     padding: 10px 20px;
+     margin-top: 10px;
+     font-weight: 700;
+}
+
+
+
+
+
+
+
+/** FOOTER COPY  */
+footer{
+     width: 100%;
+     height: 40px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background: #cee398;
+}
+
+footer p{
+     font-size: 14px;
+     font-style: italic;
+     color: #FFF;
+     opacity: 0.5;
+}
